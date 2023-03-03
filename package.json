@@ -1,0 +1,9 @@
+{
+	"name": "secondhand-shop-uniapp",
+	"version": "3.2.6",
+	"dependencies": {
+		"@element-plus/icons-vue": "^2.0.10",
+		"element-plus": "^2.2.15",
+		"vue": "^3.2.35"
+	}
+}

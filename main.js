@@ -2,6 +2,9 @@ import App from './App'
 
 // #ifndef VUE3
 import Vue from 'vue'
+import ElementPlus from 'element-plus' //添加
+import 'element-plus/dist/index.css'   //添加
+import locale from 'element-plus/lib/locale/lang/zh-cn' //切换为中文版本
 Vue.config.productionTip = false
 App.mpType = 'app'
 
@@ -37,12 +40,16 @@ const app = new Vue({
   ...App
 })
 app.$mount()
+app.use(ElementPlus);
 // #endif
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
 export function createApp() {
   const app = createSSRApp(App)
+  app.use(ElementPlus, {
+  		locale
+  	})
   return {
     app
   }
